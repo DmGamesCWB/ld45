@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RevealTextOnClick : MonoBehaviour
 {
@@ -22,25 +23,52 @@ public class RevealTextOnClick : MonoBehaviour
         textmeshPro.text = "";
     }
 
-    void SetHintText()
+    void SetHintText(int levelId)
     {
         TextMeshProUGUI textmeshPro = GetComponent<TextMeshProUGUI>();
 
-        switch (clickEvents)
+        if (levelId == 1)
         {
-            case 1:
-                textmeshPro.text += "2 - Click, ";
+            textmeshPro.text = "1 - Click ";
+        }
+        else if (levelId == 2)
+        {
+            switch (clickEvents)
+            {
+                case 1:
+                    textmeshPro.text += "2 - Click, ";
+                    break;
+                case 2:
+                    textmeshPro.text += "click and ";
+                    break;
+                case 3:
+                    textmeshPro.text += "click";
+                    break;
+                case 4:
+                    //this.EraseHintText();
+                    break;
+            }
+        }
+    }
+
+    int GetLevel()
+    {
+        Debug.Log("GetLevel()");
+        string levelName = SceneManager.GetActiveScene().name;
+
+        int levelId = 0;
+        switch (levelName)
+        {
+            case "Level_1":
+                levelId = 1;
                 break;
-            case 2:
-                textmeshPro.text += "click and ";
-                break;
-            case 3:
-                textmeshPro.text += "click";
-                break;
-            case 4:
-                //this.EraseHintText();
+            case "Level_2":
+                levelId = 2;
                 break;
         }
+        Debug.Log("Return levelID " + levelId);
+
+        return levelId;
     }
 
     // Update is called once per frame
@@ -50,9 +78,11 @@ public class RevealTextOnClick : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             clickEvents++;
+        
+
             if (clickEvents >= clicksToWait)
             {
-                SetHintText();
+                SetHintText(GetLevel());
             }
         }
     }
