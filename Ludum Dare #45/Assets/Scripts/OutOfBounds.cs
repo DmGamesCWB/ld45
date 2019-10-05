@@ -8,6 +8,8 @@ public class OutOfBounds : MonoBehaviour
     public Camera cam;
     public float bottomOffsetGameOver = 100f;
 
+    public GameObject score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class OutOfBounds : MonoBehaviour
         if (ballPositionOnScreen.y < -bottomOffsetGameOver)
         {
             Debug.Log("Game Over");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            score.GetComponent<KeepScore>().GameOver();
         }
     }
 }
