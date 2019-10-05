@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BounceOnHit : MonoBehaviour
 {
-    public float fire = 0.0f;
-    public Vector3 mousePosition;
-    public Vector3 offset;
-    
-       
+    public float bounceForceX = 5.0f;
+    public float bounceForceY = 5.0f;
+    public Camera cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +17,7 @@ public class BounceOnHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check if MouseClick occurred while hovering the ball
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -26,13 +26,13 @@ public class BounceOnHit : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.gameObject.name);
-                hit.collider.attachedRigidbody.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+                // Debug.Log( - );
+                hit.collider.attachedRigidbody.AddForce(
+                    new Vector2(
+                        (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX, 
+                        bounceForceY), 
+                    ForceMode2D.Impulse);
             }
         }
-        
-        mousePosition = Input.mousePosition;
-
-        offset = mousePosition - transform.position;
     }
 }
