@@ -26,9 +26,14 @@ public class BounceOnHit : MonoBehaviour
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+            // If a gameObject collides with the Raycast in MousePosition
             if (hit.collider != null)
             {
-                if (!hit.collider.CompareTag("Fake"))
+                // If the GameObject in this position does not have a "Fake" tag
+                if (!hit.collider.CompareTag("Fake") && 
+                    // If the instance of the Object is the same of the Object this component is attached to
+                    hit.collider.gameObject.GetInstanceID() == gameObject.GetInstanceID())
                 {
                     // Everytime the ball is hit, the score increases by one
                     if (keepScore)
@@ -42,7 +47,6 @@ public class BounceOnHit : MonoBehaviour
                         ForceMode2D.Impulse);
 
                     // Everytime the ball is hit, the score increases by one
-                    score.GetComponent<KeepScore>().AddScore(1);
                     hit.collider.attachedRigidbody.AddForce(
                         new Vector2(
                             (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX,

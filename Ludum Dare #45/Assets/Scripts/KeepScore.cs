@@ -38,6 +38,7 @@ public class KeepScore : MonoBehaviour
     public void AddScore(int i)
     {
         score += i;
+        Debug.Log(score);
     }
 
     IEnumerator LoadNextLevel()
