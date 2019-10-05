@@ -7,6 +7,7 @@ public class BounceOnHit : MonoBehaviour
     public float bounceForceX = 5.0f;
     public float bounceForceY = 5.0f;
     public Camera cam;
+    public GameObject score;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,8 @@ public class BounceOnHit : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
-                // Debug.Log( - );
+                // Everytime the ball is hit, the score increases by one
+                score.GetComponent<KeepScore>().AddScore(1);
                 hit.collider.attachedRigidbody.AddForce(
                     new Vector2(
                         (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX, 

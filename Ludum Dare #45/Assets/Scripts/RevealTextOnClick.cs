@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class WakeRigidbodyOnClick : MonoBehaviour
+public class RevealTextOnClick : MonoBehaviour
 {
     public int clicksToWait = 2;
     private int clickEvents = 0;
+
+    public string text;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +19,14 @@ public class WakeRigidbodyOnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Show text after first mouse click
         if (Input.GetMouseButtonDown(0))
         {
             clickEvents++;
-            if(clickEvents >= clicksToWait)
+            if (clickEvents >= clicksToWait)
             {
-                GetComponent<Rigidbody2D>().WakeUp();
+                TextMeshProUGUI textmeshPro = GetComponent<TextMeshProUGUI>();
+                textmeshPro.text = text;
             }
         }
     }
