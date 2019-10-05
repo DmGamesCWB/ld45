@@ -23,7 +23,6 @@ public class OutOfBounds : MonoBehaviour
         Vector3 ballPositionOnScreen = cam.WorldToScreenPoint(transform.position);
         if (ballPositionOnScreen.y < -bottomOffsetGameOver)
         {
-            Debug.Log("Game Over");
             score.GetComponent<KeepScore>().GameOver();
         }
     }
