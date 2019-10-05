@@ -1073,7 +1073,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1421179378}
   - component: {fileID: 1421179380}
-  - component: {fileID: 1421179381}
   - component: {fileID: 1421179379}
   m_Layer: 5
   m_Name: Level Title
@@ -1119,7 +1118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 6 - Portal
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1189,13 +1188,13 @@ MonoBehaviour:
   m_margin: {x: -94.07417, y: 0, z: -276.99628, w: 0}
   m_textInfo:
     textComponent: {fileID: 1421179379}
-    characterCount: 0
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1220,20 +1219,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421179377}
   m_CullTransparentMesh: 0
---- !u!114 &1421179381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421179377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbd70c40e6e39584392ac2ba010efb64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clicksToWait: 1
-  text: 1 - Click
 --- !u!1 &1597079418
 GameObject:
   m_ObjectHideFlags: 0
