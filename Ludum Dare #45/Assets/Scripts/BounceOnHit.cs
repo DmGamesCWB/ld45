@@ -27,13 +27,15 @@ public class BounceOnHit : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
-                // Everytime the ball is hit, the score increases by one
-                score.GetComponent<KeepScore>().AddScore(1);
-                hit.collider.attachedRigidbody.AddForce(
-                    new Vector2(
-                        (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX, 
-                        bounceForceY), 
-                    ForceMode2D.Impulse);
+                if (!hit.collider.CompareTag("Fake")) {
+                    // Everytime the ball is hit, the score increases by one
+                    score.GetComponent<KeepScore>().AddScore(1);
+                    hit.collider.attachedRigidbody.AddForce(
+                        new Vector2(
+                            (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX,
+                            bounceForceY),
+                        ForceMode2D.Impulse);
+                }
             }
         }
     }
