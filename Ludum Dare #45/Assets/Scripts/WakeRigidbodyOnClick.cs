@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WakeRigidbodyOnClick : MonoBehaviour
 {
-    public int clicksToWait = 2;
+    public int clicksToWait = 3;
     private int clickEvents = 0;
 
     // Start is called before the first frame update

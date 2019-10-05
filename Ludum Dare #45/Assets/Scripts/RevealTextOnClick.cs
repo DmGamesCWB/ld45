@@ -16,6 +16,33 @@ public class RevealTextOnClick : MonoBehaviour
         
     }
 
+    void EraseHintText()
+    {
+        TextMeshProUGUI textmeshPro = GetComponent<TextMeshProUGUI>();
+        textmeshPro.text = "";
+    }
+
+    void SetHintText()
+    {
+        TextMeshProUGUI textmeshPro = GetComponent<TextMeshProUGUI>();
+
+        switch (clickEvents)
+        {
+            case 1:
+                textmeshPro.text += "2 - Click, ";
+                break;
+            case 2:
+                textmeshPro.text += "click and ";
+                break;
+            case 3:
+                textmeshPro.text += "click";
+                break;
+            case 4:
+                //this.EraseHintText();
+                break;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -25,8 +52,7 @@ public class RevealTextOnClick : MonoBehaviour
             clickEvents++;
             if (clickEvents >= clicksToWait)
             {
-                TextMeshProUGUI textmeshPro = GetComponent<TextMeshProUGUI>();
-                textmeshPro.text = text;
+                SetHintText();
             }
         }
     }
