@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreGoal: 1
+  scoreGoal: 3
   scoreText: {fileID: 1023835177}
   levelOverText: {fileID: 1219649993}
 --- !u!1 &680996635
@@ -1125,6 +1125,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   score: {fileID: 579672675}
   keepScore: 0
+  shrinkRate: 1
   bounceSound: {fileID: 8300000, guid: 0961652f4a03ed148b9170988158fd2c, type: 3}
 --- !u!50 &1375229371
 Rigidbody2D:
@@ -1203,7 +1204,7 @@ RectTransform:
   m_GameObject: {fileID: 1421179377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1435897, y: 0.88585985, z: 0.88585985}
+  m_LocalScale: {x: 1.0806924, y: 0.88585985, z: 0.88585985}
   m_Children: []
   m_Father: {fileID: 1925811325}
   m_RootOrder: 1
@@ -1231,7 +1232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3 - Bricked
+  m_text: 3 - Another Brick in the Wall
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1260,10 +1261,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64
+  m_fontSize: 62.25
   m_fontSizeBase: 64
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1301,10 +1302,10 @@ MonoBehaviour:
   m_margin: {x: -94.07417, y: 0, z: -276.99628, w: 0}
   m_textInfo:
     textComponent: {fileID: 1421179379}
-    characterCount: 11
+    characterCount: 29
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 6
+    wordCount: 7
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1360,7 +1361,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1597079418}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7eb1a17a4f3e2d14ab4f564aae90d627, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1454,6 +1455,7 @@ MonoBehaviour:
   numCollision: 0
   score: {fileID: 579672675}
   hitBrickSound: {fileID: 8300000, guid: ec6bbf6e499f9744395a2bb339678522, type: 3}
+  shrinkRate: 0.7
 --- !u!1 &1868136918
 GameObject:
   m_ObjectHideFlags: 0
