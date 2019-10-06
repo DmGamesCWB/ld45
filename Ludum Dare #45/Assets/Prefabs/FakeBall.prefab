@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6682936063048585836}
   - component: {fileID: 6682936063048585826}
   - component: {fileID: 6682936063048585824}
-  - component: {fileID: 6682936063048585825}
   m_Layer: 0
   m_Name: FakeBall
   m_TagString: Fake
@@ -119,18 +118,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6682936063048585825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6682936063048585837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39daf5bbe5c64d498ee30d4c6f8ee20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 6682936063048585837}
-  xPosition: 0
-  yPosition: 0

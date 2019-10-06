@@ -40,6 +40,13 @@ public class BounceOnHit : MonoBehaviour
                     {
                         score.GetComponent<KeepScore>().AddScore(1);
                     }
+
+                    // If it is a object of type, it must be destroyed after click
+                    if (hit.collider.CompareTag("Blink"))
+                    {
+                        Destroy(hit.collider.gameObject);
+                    }
+
                     hit.collider.attachedRigidbody.AddForce(
                         new Vector2(
                             (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX,

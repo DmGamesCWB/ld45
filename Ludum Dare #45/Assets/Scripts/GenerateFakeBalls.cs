@@ -7,11 +7,13 @@ public class GenerateFakeBalls : MonoBehaviour
     public GameObject ball;
     public float xPosition;
     public float yPosition;
+    public int numberOfBalls = 10;
+    private int ballsInstantiated = 0;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("LaunchBall", 3.0f, 8.0f);
         yPosition = 8;
+        StartCoroutine(SpawnBalls(3.0f));
     }
 
     // Update is called once per frame
@@ -20,10 +22,17 @@ public class GenerateFakeBalls : MonoBehaviour
         
     }
 
-    void LaunchBall()
+    private IEnumerator SpawnBalls(float waitTime)
     {
+        yield return new WaitForSeconds(waitTime);
         xPosition = Random.Range(-8, 8);
-         
         Instantiate(ball, new Vector3(xPosition, yPosition, 0), Quaternion.identity);
+
+        ballsInstantiated++;
+        if (ballsInstantiated < numberOfBalls)
+        {
+            StartCoroutine(SpawnBalls(waitTime));
+        }
+
     }
 }

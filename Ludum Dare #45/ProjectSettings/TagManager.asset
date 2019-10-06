@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fake
+  - Blink
   layers:
   - Default
   - TransparentFX
