@@ -447,8 +447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 639.99, y: -163.66}
-  m_SizeDelta: {x: 1444.9, y: 170.87}
+  m_AnchoredPosition: {x: 614.9, y: -162.1}
+  m_SizeDelta: {x: 1501.6, y: 198.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662946018
 MonoBehaviour:
@@ -1099,7 +1099,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1157294216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398111493}
+        m_MethodName: playCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1157294216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,7 +1365,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295419275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 398111493}
+        m_MethodName: exitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1295419275
 MonoBehaviour:
   m_ObjectHideFlags: 0

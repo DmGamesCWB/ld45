@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+public class QuitScreen : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,21 +14,14 @@ public class MainMenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
-    public void playGame()
+    public void BackToMenu()
     {
-        SceneManager.LoadScene("Level_1");
-    }
-
-    public void playCredits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
-
-    public void exitGame()
-    {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }
