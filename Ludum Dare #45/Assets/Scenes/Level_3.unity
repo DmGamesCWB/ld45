@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7dc5c5b23edf141aea0759c2e86ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForceX: 4
+  bounceForceX: 5
   bounceForceY: 5
   cam: {fileID: 519420031}
   score: {fileID: 579672675}
@@ -1142,7 +1142,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.25
+  m_GravityScale: 0.35
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
