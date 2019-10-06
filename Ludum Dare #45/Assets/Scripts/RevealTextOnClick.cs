@@ -53,6 +53,10 @@ public class RevealTextOnClick : MonoBehaviour
         {
             textmeshPro.text = "3 - Bricked";
         }
+        else if (levelId == 6)
+        {
+            textmeshPro.text = "6 - Portal";
+        }
     }
 
     int GetLevel()
@@ -71,6 +75,9 @@ public class RevealTextOnClick : MonoBehaviour
                 break;
             case "Level_3":
                 levelId = 3;
+                break;
+            case "Level_6":
+                levelId = 6;
                 break;
         }
         Debug.Log("Return levelID " + levelId);
