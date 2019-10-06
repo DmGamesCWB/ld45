@@ -49,6 +49,10 @@ public class RevealTextOnClick : MonoBehaviour
                     break;
             }
         }
+        else if (levelId == 3)
+        {
+            textmeshPro.text = "3 - Bricked";
+        }
     }
 
     int GetLevel()
@@ -64,6 +68,9 @@ public class RevealTextOnClick : MonoBehaviour
                 break;
             case "Level_2":
                 levelId = 2;
+                break;
+            case "Level_3":
+                levelId = 3;
                 break;
         }
         Debug.Log("Return levelID " + levelId);

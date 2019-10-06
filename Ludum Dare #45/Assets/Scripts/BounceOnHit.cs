@@ -8,6 +8,7 @@ public class BounceOnHit : MonoBehaviour
     public float bounceForceY = 5.0f;
     public Camera cam;
     public GameObject score;
+    public bool keepScore = true;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,10 @@ public class BounceOnHit : MonoBehaviour
             if (hit.collider != null)
             {
                 // Everytime the ball is hit, the score increases by one
-                score.GetComponent<KeepScore>().AddScore(1);
+                if (keepScore)
+                {
+                    score.GetComponent<KeepScore>().AddScore(1);
+                }
                 hit.collider.attachedRigidbody.AddForce(
                     new Vector2(
                         (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX, 
