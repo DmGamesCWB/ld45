@@ -7,6 +7,8 @@ public class BrickHit : MonoBehaviour
     public int numCollision = 0;
     private const int kMaxCollisions = 3;
     public GameObject score;
+    public AudioClip hitBrickSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class BrickHit : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("Brick hit");
+        AudioManager.inst.AudioPlay(hitBrickSound);
         numCollision++;
     }
 }

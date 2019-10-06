@@ -1453,6 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numCollision: 0
   score: {fileID: 579672675}
+  hitBrickSound: {fileID: 8300000, guid: ec6bbf6e499f9744395a2bb339678522, type: 3}
 --- !u!1 &1868136918
 GameObject:
   m_ObjectHideFlags: 0
