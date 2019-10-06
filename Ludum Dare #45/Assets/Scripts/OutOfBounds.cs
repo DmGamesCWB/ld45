@@ -7,6 +7,8 @@ public class OutOfBounds : MonoBehaviour
 {
     public Camera cam;
     public float bottomOffsetGameOver = 100f;
+    public AudioClip gameOverSound;
+    private bool gameOverSoundPlayed = false;
 
     public GameObject score;
 
@@ -24,6 +26,11 @@ public class OutOfBounds : MonoBehaviour
         if (ballPositionOnScreen.y < -bottomOffsetGameOver)
         {
             score.GetComponent<KeepScore>().GameOver();
+            if (!gameOverSoundPlayed)
+            {
+                AudioManager.inst.AudioPlay(gameOverSound);
+                gameOverSoundPlayed = true;
+            }
         }
     }
 }

@@ -748,6 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   bottomOffsetGameOver: 100
+  gameOverSound: {fileID: 8300000, guid: 61965c41cc6ba0443bb8d88b099907d8, type: 3}
   score: {fileID: 579672675}
 --- !u!114 &877886688
 MonoBehaviour:
@@ -1309,7 +1310,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 67.1
+  m_fontSize: 66.75
   m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 1
