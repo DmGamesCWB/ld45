@@ -61,7 +61,6 @@ public class BounceOnHit : MonoBehaviour
                             bounceForceY),
                         ForceMode2D.Impulse);
 
-                    // Everytime the ball is hit, the score increases by one
                     hit.collider.attachedRigidbody.AddForce(
                         new Vector2(
                             (hit.collider.gameObject.transform.position.x - mousePos.x) * bounceForceX,
