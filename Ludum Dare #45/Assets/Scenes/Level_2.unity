@@ -984,7 +984,8 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   score: {fileID: 579672675}
   keepScore: 1
-  bounceSound: {fileID: 8300000, guid: 0961652f4a03ed148b9170988158fd2c, type: 3}
+  shrinkRate: 0.8
+  bounceSound: {fileID: 8300000, guid: 96deb316443fbb743a4973005b175e2c, type: 3}
 --- !u!50 &1375229371
 Rigidbody2D:
   serializedVersion: 4

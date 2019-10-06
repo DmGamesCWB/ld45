@@ -42,7 +42,7 @@ public class RevealTextOnClick : MonoBehaviour
                     textmeshPro.text += "click and ";
                     break;
                 case 3:
-                    textmeshPro.text += "click";
+                    textmeshPro.text += "shrink";
                     break;
                 case 4:
                     //this.EraseHintText();
