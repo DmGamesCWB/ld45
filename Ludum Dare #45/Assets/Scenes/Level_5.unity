@@ -1055,8 +1055,8 @@ MonoBehaviour:
   bounceForceY: 10
   cam: {fileID: 519420031}
   score: {fileID: 579672675}
-  holdSound: {fileID: 8300000, guid: fcbe200c62c19df48a7562965e107143, type: 3}
-  releaseSound: {fileID: 8300000, guid: 95957e6d4557cfd4586f1abcabb5fc73, type: 3}
+  holdSound: {fileID: 8300000, guid: cc7f53de0b6ada240b3b72138f4d2fca, type: 3}
+  releaseSound: {fileID: 8300000, guid: fcbe200c62c19df48a7562965e107143, type: 3}
 --- !u!50 &1375229371
 Rigidbody2D:
   serializedVersion: 4
