@@ -1055,8 +1055,8 @@ MonoBehaviour:
   bounceForceY: 10
   cam: {fileID: 519420031}
   score: {fileID: 579672675}
-  holdSound: {fileID: 8300000, guid: 56d3be2e0a62c554b876c6976973630c, type: 3}
-  releaseSound: {fileID: 8300000, guid: 95957e6d4557cfd4586f1abcabb5fc73, type: 3}
+  holdSound: {fileID: 8300000, guid: cc7f53de0b6ada240b3b72138f4d2fca, type: 3}
+  releaseSound: {fileID: 8300000, guid: fcbe200c62c19df48a7562965e107143, type: 3}
 --- !u!50 &1375229371
 Rigidbody2D:
   serializedVersion: 4
@@ -1092,6 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   bottomOffsetGameOver: 100
+  gameOverSound: {fileID: 8300000, guid: 61965c41cc6ba0443bb8d88b099907d8, type: 3}
   score: {fileID: 579672675}
 --- !u!114 &1375229373
 MonoBehaviour:

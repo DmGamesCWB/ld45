@@ -1215,6 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   bottomOffsetGameOver: 100
+  gameOverSound: {fileID: 8300000, guid: 61965c41cc6ba0443bb8d88b099907d8, type: 3}
   score: {fileID: 579672675}
 --- !u!114 &1375229373
 MonoBehaviour:

@@ -1161,6 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   bottomOffsetGameOver: 100
+  gameOverSound: {fileID: 8300000, guid: 61965c41cc6ba0443bb8d88b099907d8, type: 3}
   score: {fileID: 579672675}
 --- !u!114 &1375229373
 MonoBehaviour:
@@ -1452,6 +1453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numCollision: 0
   score: {fileID: 579672675}
+  hitBrickSound: {fileID: 8300000, guid: ec6bbf6e499f9744395a2bb339678522, type: 3}
 --- !u!1 &1868136918
 GameObject:
   m_ObjectHideFlags: 0
