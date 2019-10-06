@@ -9,6 +9,8 @@ public class BounceOnHit : MonoBehaviour
     public Camera cam;
     public GameObject score;
     public bool keepScore = true;
+    public float shrinkRate = 1.0f; // By default do not shrink
+
     public AudioClip bounceSound;
 
     // Start is called before the first frame update
@@ -37,6 +39,10 @@ public class BounceOnHit : MonoBehaviour
                     hit.collider.gameObject.GetInstanceID() == gameObject.GetInstanceID())
                 {
                     AudioManager.inst.AudioPlay(bounceSound);
+
+                    // Shrink ball
+                    transform.localScale *= shrinkRate;
+
                     // Everytime the ball is hit, the score increases by one
                     if (keepScore)
                     {
