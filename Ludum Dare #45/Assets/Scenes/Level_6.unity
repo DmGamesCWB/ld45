@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1375229366}
   score: {fileID: 579672675}
+  portalSound: {fileID: 8300000, guid: bef5a3bfb605144498efbe47e31a048d, type: 3}
 --- !u!1 &579672675
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1375229366}
   score: {fileID: 579672675}
+  portalSound: {fileID: 8300000, guid: bef5a3bfb605144498efbe47e31a048d, type: 3}
 --- !u!1 &1023835175
 GameObject:
   m_ObjectHideFlags: 0

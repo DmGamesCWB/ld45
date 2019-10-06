@@ -6,6 +6,7 @@ public class Portal : MonoBehaviour
 {
     public GameObject ball;
     public GameObject score;
+    public AudioClip portalSound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class Portal : MonoBehaviour
         Debug.Log("updating ball");
 
         ball.transform.position = new Vector3(this.transform.position.x * -1 + offset, ball.transform.position.y, 0);
+        AudioManager.inst.AudioPlay(portalSound);
         score.GetComponent<KeepScore>().AddScore(1);
     }
 }
