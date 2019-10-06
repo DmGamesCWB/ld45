@@ -9,6 +9,7 @@ public class BounceOnHit : MonoBehaviour
     public Camera cam;
     public GameObject score;
     public bool keepScore = true;
+    public AudioClip bounceSound;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class BounceOnHit : MonoBehaviour
                     // If the instance of the Object is the same of the Object this component is attached to
                     hit.collider.gameObject.GetInstanceID() == gameObject.GetInstanceID())
                 {
+                    AudioManager.inst.AudioPlay(bounceSound);
                     // Everytime the ball is hit, the score increases by one
                     if (keepScore)
                     {
