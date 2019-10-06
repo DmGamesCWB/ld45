@@ -148,8 +148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -211.89996, y: -24.800003}
-  m_SizeDelta: {x: -543.2, y: 94.18}
+  m_AnchoredPosition: {x: -211.89996, y: -82.89}
+  m_SizeDelta: {x: -543.2, y: -22.000038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398111492
 MonoBehaviour:
@@ -459,7 +459,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.14702742, g: 0.17510425, b: 0.5283019, a: 1}
+    m_NormalColor: {r: 0.6969562, g: 0.7032116, b: 0.7735849, a: 1}
     m_HighlightedColor: {r: 0.1509434, g: 0.13599145, b: 0.13599145, a: 1}
     m_PressedColor: {r: 0.9339623, g: 0.8943129, b: 0.8943129, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -708,14 +708,14 @@ RectTransform:
   m_GameObject: {fileID: 913475863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0045998, y: 0.46455494, z: 1.0045998}
+  m_LocalScale: {x: 1.0849679, y: 0.6146062, z: 1.0849679}
   m_Children: []
   m_Father: {fileID: 662946017}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169, y: 104}
+  m_AnchoredPosition: {x: 87, y: 51.7}
   m_SizeDelta: {x: -577.5, y: -95.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913475865
@@ -736,10 +736,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AGNUS: BALLS OF STEEL'
+  m_text: 'AGNUS
+
+    BALLS OF STEEL'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -748,14 +750,13 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 3
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: bbe693c2974ce9b4ab5905f9cbe19fa3,
-    type: 2}
+    topLeft: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    topRight: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    bottomLeft: {r: 0.040968873, g: 0.039649345, b: 0.31132078, a: 1}
+    bottomRight: {r: 0.040968873, g: 0.039649345, b: 0.31132078, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_overrideHtmlColors: 0
@@ -765,14 +766,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 64
+  m_fontSize: 72
   m_fontSizeBase: 64
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 257
+  m_fontStyle: 1
+  m_textAlignment: 260
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -803,15 +804,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -119.3682, w: -0.00004819467}
+  m_margin: {x: 0, y: 4.7316666, z: -119.3682, w: -0.00004819467}
   m_textInfo:
     textComponent: {fileID: 913475865}
-    characterCount: 21
+    characterCount: 20
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -995,7 +996,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.14702742, g: 0.17510425, b: 0.5283019, a: 1}
+    m_NormalColor: {r: 0.67058825, g: 0.6745098, b: 0.7411765, a: 1}
     m_HighlightedColor: {r: 0.1509434, g: 0.13599145, b: 0.13599145, a: 1}
     m_PressedColor: {r: 0.9339623, g: 0.8943129, b: 0.8943129, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1560,7 +1561,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
