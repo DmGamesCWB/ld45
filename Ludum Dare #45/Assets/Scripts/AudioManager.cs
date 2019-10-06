@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource sounds;
+    
     //Singleton Audio Manager
     public static AudioManager inst = null;
 
@@ -14,10 +15,11 @@ public class AudioManager : MonoBehaviour
         {
             inst = this;
         }
+        /*
         else if (inst != this)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     public void AudioPlay(AudioClip audioClip)

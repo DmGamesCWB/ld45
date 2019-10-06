@@ -9,6 +9,8 @@ public class DuplicateBall : MonoBehaviour
     public Camera cam;
     public GameObject score;
     public GameObject ball;
+    public AudioClip duplicateSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class DuplicateBall : MonoBehaviour
                             bounceForceY),
                         ForceMode2D.Impulse);
                     Instantiate(ball, new Vector3(ball.transform.position.x + 0.3f, ball.transform.position.y + 0.3f, ball.transform.position.z), Quaternion.identity);
+                    AudioManager.inst.AudioPlay(duplicateSound);
                 }
             }
         }

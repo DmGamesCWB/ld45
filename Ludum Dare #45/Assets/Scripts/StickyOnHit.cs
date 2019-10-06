@@ -8,6 +8,8 @@ public class StickyOnHit : MonoBehaviour
     public float bounceForceY = 5.0f;
     public Camera cam;
     public GameObject score;
+    public AudioClip holdSound;
+    public AudioClip releaseSound;
 
     private bool holdingBall = false;
     private Vector3 offset; // offset of holding point from center of Ball
@@ -41,6 +43,7 @@ public class StickyOnHit : MonoBehaviour
                 {
                     holdingBall = false;
                     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                    AudioManager.inst.AudioPlay(releaseSound);
 
                     // Everytime the ball is released, the score increases by one
                     score.GetComponent<KeepScore>().AddScore(1);
@@ -58,6 +61,7 @@ public class StickyOnHit : MonoBehaviour
                         0);
                     holdingBall = true;
                     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                    AudioManager.inst.AudioPlay(holdSound);
                 }
             }
         }
