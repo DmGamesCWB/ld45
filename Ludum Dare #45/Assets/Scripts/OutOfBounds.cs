@@ -9,6 +9,7 @@ public class OutOfBounds : MonoBehaviour
     public float bottomOffsetGameOver = 100f;
     public AudioClip gameOverSound;
     private bool gameOverSoundPlayed = false;
+    public bool updside = false;
 
     public GameObject score;
 
@@ -23,7 +24,20 @@ public class OutOfBounds : MonoBehaviour
     {
         // Check if Ball is out of the scene and GameOver
         Vector3 ballPositionOnScreen = cam.WorldToScreenPoint(transform.position);
-        if (ballPositionOnScreen.y < -bottomOffsetGameOver)
+
+        if (updside)
+        {
+            if (ballPositionOnScreen.y > bottomOffsetGameOver)
+            {
+                score.GetComponent<KeepScore>().GameOver();
+                if (!gameOverSoundPlayed)
+                {
+                    AudioManager.inst.AudioPlay(gameOverSound);
+                    gameOverSoundPlayed = true;
+                }
+            }
+        }
+        else if (ballPositionOnScreen.y < -bottomOffsetGameOver)
         {
             score.GetComponent<KeepScore>().GameOver();
             if (!gameOverSoundPlayed)
